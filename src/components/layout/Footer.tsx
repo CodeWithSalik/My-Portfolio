@@ -45,7 +45,7 @@ export default function Footer() {
                 href="https://github.com/CodeWithSalik"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-surface border border-border-subtle text-text-secondary hover:text-text-primary hover:border-indigo-500/30 transition-colors"
+                className="p-2.5 rounded-lg bg-surface border border-border-subtle text-text-secondary hover:text-text-primary hover:border-accent/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
                 aria-label="GitHub Profile"
               >
                 <GitHubIcon size={18} />
@@ -54,7 +54,7 @@ export default function Footer() {
                 href="https://www.instagram.com/codewithsalik/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg bg-surface border border-border-subtle text-text-secondary hover:text-text-primary hover:border-pink-500/30 transition-colors"
+                className="p-2.5 rounded-lg bg-surface border border-border-subtle text-text-secondary hover:text-text-primary hover:border-pink-500/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
                 aria-label="Instagram Profile"
               >
                 <InstagramIcon size={18} />
@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border-subtle flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-text-muted">
           <p>© {new Date().getFullYear()} Salik Pirzada. All rights reserved.</p>
-          <p>Built by CodeWithSalik · Next.js 15 & Tailwind</p>
+          <p>Built by CodeWithSalik · Next.js 16 & Tailwind</p>
         </div>
       </div>
     </footer>

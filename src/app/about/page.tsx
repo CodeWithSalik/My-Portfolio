@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import FadeIn from '@/components/ui/FadeIn';
 import Section from '@/components/ui/Section';
 import { timeline } from '@/data/timeline';
-import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
 
@@ -112,12 +111,10 @@ export default function AboutPage() {
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
               </p>
               <div className="flex justify-center gap-4">
-                <Link href="/contact">
-                  <Button className="group">
-                    Get in Touch
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                <Button href="/contact" className="group">
+                  Get in Touch
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
                 <Button href="/resume" variant="secondary" className="rounded-full">
                   View Resume
                 </Button>

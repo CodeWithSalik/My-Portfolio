@@ -16,7 +16,7 @@ export default function AchievementsPage() {
         <FadeIn>
           <div className="max-w-3xl mb-16">
             <div className="inline-flex items-center gap-2 mb-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-amber-400 font-semibold">Verified Distinctions</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 font-semibold">Verified Distinctions</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-text-primary mb-4">
               Achievements & Recognition

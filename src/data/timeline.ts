@@ -3,7 +3,7 @@ import { TimelineEvent } from '@/types';
 export const timeline: TimelineEvent[] = [
   {
     id: 'btech-cse',
-    year: '2025',
+    year: '2026',
     title: 'B.Tech CSE at Lovely Professional University',
     description:
       'Began undergraduate studies in Computer Science and Engineering, continuing to build and ship software alongside academics.',

@@ -104,6 +104,10 @@ export default function CommandPalette() {
           <input
             ref={inputRef}
             type="text"
+            role="combobox"
+            aria-expanded={isOpen}
+            aria-controls="command-list"
+            aria-autocomplete="list"
             className="flex-1 bg-transparent border-none outline-none text-text-primary placeholder-text-muted text-sm font-sans"
             placeholder="Type a command or search sections..."
             value={query}
@@ -115,7 +119,7 @@ export default function CommandPalette() {
           </kbd>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-2 bg-canvas">
+        <div id="command-list" role="listbox" className="flex-1 overflow-y-auto p-2 bg-canvas">
           {filteredCommands.length === 0 ? (
             <div className="py-12 text-center text-sm text-text-muted font-mono">
               No matching commands.
@@ -125,15 +129,17 @@ export default function CommandPalette() {
               {filteredCommands.map((cmd, index) => (
                 <button
                   key={cmd.id}
+                  role="option"
+                  aria-selected={index === selectedIndex}
                   onClick={() => {
                     cmd.action();
                     setIsOpen(false);
                   }}
                   onMouseEnter={() => setSelectedIndex(index)}
                   className={cn(
-                    'flex items-center w-full px-3 py-2.5 text-xs md:text-sm rounded-lg text-left transition-colors',
+                    'flex items-center w-full px-3 py-2.5 text-xs md:text-sm rounded-lg text-left transition-colors focus:outline-none',
                     index === selectedIndex
-                      ? 'bg-indigo-500/10 text-indigo-400 font-medium'
+                      ? 'bg-accent/10 text-accent font-semibold'
                       : 'text-text-secondary hover:bg-surface'
                   )}
                 >

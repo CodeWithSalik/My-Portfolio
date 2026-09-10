@@ -8,6 +8,7 @@ import SkipToContent from '@/components/layout/SkipToContent';
 import CommandPalette from '@/components/layout/CommandPalette';
 import { personalInfo } from '@/data/personal';
 import { socialLinks } from '@/data/social';
+import { SITE_URL } from '@/lib/constants';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://salik.dev'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Salik Pirzada — Developer, Builder & Computer Science Student',
     template: '%s | Salik Pirzada',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://salik.dev',
+    url: SITE_URL,
     title: 'Salik Pirzada — Developer, Builder & Computer Science Student',
     description:
       'Computer Science student at Lovely Professional University building production web applications, commerce platforms, and real products.',
@@ -57,9 +58,12 @@ export default function RootLayout({
         '@type': 'Person',
         name: personalInfo.name,
         alternateName: personalInfo.brand,
-        url: 'https://salik.dev',
+        url: SITE_URL,
         jobTitle: 'Developer & Computer Science Student',
-        alumniOf: 'Lovely Professional University',
+        affiliation: {
+          '@type': 'EducationalOrganization',
+          name: 'Lovely Professional University',
+        },
         knowsAbout: [
           'Web Development',
           'Full-Stack Engineering',
@@ -75,7 +79,7 @@ export default function RootLayout({
       {
         '@type': 'WebSite',
         name: 'Salik Pirzada',
-        url: 'https://salik.dev',
+        url: SITE_URL,
       },
     ],
   };

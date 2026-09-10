@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salik Pirzada — Engineering Portfolio
 
-## Getting Started
+> **Developer • Builder • Computer Science Student**  
+> Brand: **CodeWithSalik** • [salikpirzada.dev](https://salikpirzada.dev)
 
-First, run the development server:
+A personal portfolio engineered from the ground up to showcase production full-stack systems, architectural depth, defensive security practices, and factual academic achievements.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Key Architectural Highlights
+
+- **Next.js 16 App Router & React 19**: Server Components by default for zero layout shift and instant initial load.
+- **Tailwind CSS v4 Design System**: Semantic color tokens with WCAG AA compliance in both dark and light modes.
+- **Audited Case Studies**: Detailed engineering breakdowns of flagship systems including:
+  - **KashmirStag**: Production B2C e-commerce platform with atomic two-phase inventory reservations (`availableQty = onHand - reservedQty`), timing-safe Razorpay HMAC verification, and 28-step audited admin operations.
+  - **Fragments of Me**: Emotion-first reading sanctuary with ambient audio soundscapes, Firestore subcollections, and dedicated transactional microservice.
+  - **Azad Associates Solar**: Commercial platform and solar estimator for an authorized KPDCL vendor under PM Surya Ghar Muft Bijli Yojana.
+- **Recruiter-Optimized Resume Experience**: Editorial web presentation paired with an ATS-compliant, single-click printable format.
+- **Accessible & Fast**: Full keyboard navigation (Command Palette via `Ctrl+K` / `Cmd+K`, Skip to Content, visible focus indicators).
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| **Framework** | Next.js 16 (App Router, Turbopack) |
+| **UI & Styling** | React 19, Tailwind CSS v4, Framer Motion, Lucide Icons |
+| **Type Safety** | TypeScript 5 (Strict Mode) |
+| **Fonts** | Geist Sans & Geist Mono (`next/font/google`) |
+| **Deployment** | Vercel production deployment with statically prerendered routes |
+
+---
+
+## 📁 Repository Structure
+
+```text
+src/
+├── app/                  # Next.js App Router routes & static metadata
+│   ├── about/            # Journey timeline & engineering philosophy
+│   ├── achievements/     # Verified academic & technical honors
+│   ├── contact/          # Direct contact channels
+│   ├── projects/         # Case studies (KashmirStag, Fragments, Azad)
+│   ├── resume/           # Recruiter & ATS resume views
+│   ├── not-found.tsx     # Custom 404 handler
+│   ├── robots.ts         # Dynamic robots.txt
+│   └── sitemap.ts        # Search engine sitemap
+├── components/           # Reusable UI, layout, and feature components
+│   ├── layout/           # Navbar, Footer, CommandPalette, ThemeProvider
+│   ├── projects/         # Architecture diagrams, metrics, cards
+│   ├── resume/           # Editorial resume layout & print engine
+│   └── ui/               # Button, Card, Badge, Modal, FadeIn
+├── data/                 # Single-source-of-truth typed datasets
+│   ├── achievements.ts   # Verified institutional recognitions
+│   ├── education.ts      # Class X, XII & B.Tech credentials
+│   ├── personal.ts       # Core bio & contact data
+│   ├── projects.ts       # Flagship projects metadata & highlights
+│   └── skills.ts         # Domain-categorized technical stack
+└── lib/                  # Utilities, constants, and theme hooks
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Environment Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` for local customizations:
 
-## Learn More
+```bash
+# Site Base URL (used for canonical URLs, OpenGraph, sitemap, and robots.txt)
+NEXT_PUBLIC_SITE_URL=https://salikpirzada.dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💻 Development & Build Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Run local development server
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Run TypeScript typecheck (zero errors)
+npm run typecheck
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run ESLint validation (zero warnings)
+npm run lint
+
+# Compile production build
+npm run build
+
+# Start production server locally
+npm run start
+```
+
+---
+
+## 🚢 Deployment (Vercel)
+
+This application is fully optimized for continuous deployment on **Vercel**:
+
+1. Push code to your GitHub repository (`github.com/CodeWithSalik/portfolio`).
+2. Import the project into Vercel.
+3. (Optional) Set `NEXT_PUBLIC_SITE_URL` to your production domain.
+4. Deploy — all 14 routes will automatically prerender statically with zero runtime cold-start overhead.
+
+---
+
+## 📄 License & Attribution
+
+© 2026 Salik Pirzada. All rights reserved. Created with initiative and care by [CodeWithSalik](https://github.com/CodeWithSalik).
+

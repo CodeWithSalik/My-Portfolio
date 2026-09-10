@@ -50,13 +50,13 @@ export default function Card({ children, className, href }: CardProps) {
     const isExternal = href.startsWith('http');
     if (isExternal) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-2xl">
+        <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-2xl">
           {content}
         </a>
       );
     }
     return (
-      <Link href={href} className="block h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-2xl">
+      <Link href={href} className="block h-full group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-2xl">
         {content}
       </Link>
     );

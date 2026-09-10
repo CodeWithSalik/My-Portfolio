@@ -41,7 +41,7 @@ export default function Navbar() {
       className={cn(
         'fixed top-0 inset-x-0 z-40 w-full transition-all duration-300 border-b border-transparent print:hidden',
         isScrolled || isMobileMenuOpen 
-          ? 'bg-canvas/90 backdrop-blur-xl border-border-subtle shadow-sm' 
+          ? 'bg-surface border-border-subtle shadow-sm' 
           : 'bg-transparent'
       )}
     >
@@ -50,20 +50,20 @@ export default function Navbar() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-lg font-bold tracking-tight text-text-primary z-50"
+            className="text-lg font-bold tracking-tight text-text-primary z-50 focus:outline-none focus:ring-2 focus:ring-accent rounded-lg px-1"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Salik Pirzada
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main Navigation">
             <ul className="flex items-center gap-6 text-sm font-medium text-text-secondary">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link 
                     href={link.href}
-                    className="hover:text-text-primary transition-colors"
+                    className="hover:text-text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded-md px-1 py-0.5"
                   >
                     {link.label}
                   </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
                 href="https://github.com/CodeWithSalik"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-text-muted hover:text-text-primary transition-colors rounded-lg hover:bg-surface-elevated"
+                className="p-2 text-text-muted hover:text-text-primary transition-colors rounded-lg hover:bg-surface-elevated focus:outline-none focus:ring-2 focus:ring-accent"
                 aria-label="GitHub Profile"
               >
                 <GitHubIcon size={18} />
@@ -89,8 +89,9 @@ export default function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 -mr-2 text-text-secondary hover:text-text-primary focus:outline-none"
-              aria-label="Toggle Menu"
+              className="p-2 -mr-2 text-text-secondary hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent rounded-lg"
+              aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -100,7 +101,7 @@ export default function Navbar() {
 
       {/* Mobile Nav Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-canvas/98 backdrop-blur-md pt-24 px-6 md:hidden overflow-y-auto">
+        <div className="fixed inset-0 z-40 bg-canvas pt-24 px-6 md:hidden overflow-y-auto border-b border-border-subtle">
           <nav className="flex flex-col gap-8">
             <ul className="flex flex-col gap-4 text-2xl font-semibold tracking-tight text-text-primary">
               {navLinks.map((link) => (

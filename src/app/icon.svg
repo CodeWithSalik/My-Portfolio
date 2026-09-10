@@ -1,0 +1,59 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131316"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="topGlyph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="botGlyph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Squircle Base -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Internal Radial Glow -->
+  <circle cx="32" cy="32" r="22" fill="url(#centerGlow)"/>
+
+  <!-- High-Tech Neon Border -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="url(#borderGrad)" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Top Bracket / Hook: (38bdf8 -> 6366f1) -->
+  <path 
+    d="M 44 19 L 22 25 L 35 32" 
+    stroke="url(#topGlyph)" 
+    stroke-width="5.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Bottom Bracket / Hook: (6366f1 -> a855f7) -->
+  <path 
+    d="M 29 32 L 42 39 L 20 45" 
+    stroke="url(#botGlyph)" 
+    stroke-width="5.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Central Bridge Core Accent Dot -->
+  <circle cx="32" cy="32" r="2.5" fill="#38bdf8"/>
+
+  <!-- Active Status Emerald Pulse in Top-Right Corner -->
+  <circle cx="50" cy="14" r="3" fill="#10b981"/>
+  <circle cx="50" cy="14" r="4.5" stroke="#10b981" stroke-width="1" stroke-opacity="0.5"/>
+</svg>

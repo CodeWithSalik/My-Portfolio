@@ -88,7 +88,7 @@ export default function AchievementsGallery({ achievements }: AchievementsGaller
                     <span className={cn(
                       'px-3 py-1 rounded-full text-xs font-mono font-semibold border',
                       isStudentOfYear 
-                        ? 'bg-amber-500/10 text-amber-400 border-amber-500/30' 
+                        ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30' 
                         : 'bg-canvas text-text-secondary border-border-subtle'
                     )}>
                       {achievement.year}

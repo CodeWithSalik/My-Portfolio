@@ -5,7 +5,7 @@ export const education: Education[] = [
     id: 'btech-cse',
     level: 'B.Tech Computer Science and Engineering',
     institution: 'Lovely Professional University (LPU)',
-    period: '2025 - Present',
+    period: '2026 – Present',
     status: 'current',
     recognition: 'Currently pursuing 1st Semester'
   },

@@ -102,14 +102,15 @@ code {
 
 @media print {
   @page {
-    margin: 12mm;
-    size: auto;
+    margin: 10mm 12mm;
+    size: A4 portrait;
   }
 
   body {
     background-color: white !important;
     color: black !important;
-    font-size: 11pt;
+    font-size: 10pt;
+    line-height: 1.45;
   }
   
   header,
@@ -117,5 +118,18 @@ code {
   nav,
   .no-print {
     display: none !important;
+  }
+
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  code {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: black !important;
+    font-size: 9.5pt;
   }
 }
