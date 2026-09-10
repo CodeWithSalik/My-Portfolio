@@ -2,10 +2,9 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, ExternalLink, Moon, Sun, Monitor, FolderKanban } from 'lucide-react';
+import { Search, ExternalLink, FolderKanban } from 'lucide-react';
 import Modal from '@/components/ui/Modal';
 import { cn } from '@/lib/utils';
-import { useTheme } from '@/components/layout/ThemeProvider';
 
 interface Command {
   id: string;
@@ -21,7 +20,6 @@ export default function CommandPalette() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const { setTheme } = useTheme();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -42,10 +40,6 @@ export default function CommandPalette() {
     }
   }, [isOpen]);
 
-  const toggleTheme = (t: 'light' | 'dark' | 'system') => {
-    setTheme(t);
-  };
-
   const commands: Command[] = [
     { id: 'home', title: 'Home', section: 'Navigation', action: () => router.push('/') },
     { id: 'projects', title: 'All Projects', section: 'Navigation', action: () => router.push('/projects') },
@@ -64,11 +58,6 @@ export default function CommandPalette() {
     { id: 'fragments-live', title: 'Fragments of Me (Live Sanctuary)', icon: <ExternalLink size={14} />, section: 'External Products', action: () => window.open('https://fragmants-of-me.vercel.app/', '_blank') },
     { id: 'github', title: 'GitHub Profile (@CodeWithSalik)', icon: <ExternalLink size={14} />, section: 'Social & Code', action: () => window.open('https://github.com/CodeWithSalik', '_blank') },
     { id: 'instagram', title: 'Instagram (@codewithsalik)', icon: <ExternalLink size={14} />, section: 'Social & Code', action: () => window.open('https://www.instagram.com/codewithsalik/', '_blank') },
-    
-    // Themes
-    { id: 'theme-dark', title: 'Theme: Dark Mode', icon: <Moon size={14} />, section: 'Preferences', action: () => toggleTheme('dark') },
-    { id: 'theme-light', title: 'Theme: Light Mode', icon: <Sun size={14} />, section: 'Preferences', action: () => toggleTheme('light') },
-    { id: 'theme-system', title: 'Theme: Follow System', icon: <Monitor size={14} />, section: 'Preferences', action: () => toggleTheme('system') },
   ];
 
   const filteredCommands = query === '' 

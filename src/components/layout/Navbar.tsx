@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { GitHubIcon } from '@/components/ui/Icons';
 import { cn } from '@/lib/utils';
-import ThemeToggle from './ThemeToggle';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -80,13 +79,11 @@ export default function Navbar() {
               >
                 <GitHubIcon size={18} />
               </a>
-              <ThemeToggle />
             </div>
           </nav>
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 md:hidden z-50">
-            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 -mr-2 text-text-secondary hover:text-text-primary focus:outline-none focus:ring-2 focus:ring-accent rounded-lg"

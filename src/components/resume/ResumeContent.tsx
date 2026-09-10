@@ -142,7 +142,7 @@ export default function ResumeContent() {
                       Institution: Lovely Professional University (B.Tech CSE)
                     </span>
                     <span className="px-3 py-1.5 rounded-lg bg-canvas border border-border-subtle text-text-secondary">
-                      Location: Srinagar, J&K, India
+                      Location: Jalandhar, Punjab, India
                     </span>
                     <span className="px-3 py-1.5 rounded-lg bg-canvas border border-border-subtle text-text-secondary">
                       Brand: CodeWithSalik
