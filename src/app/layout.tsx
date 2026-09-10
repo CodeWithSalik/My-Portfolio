@@ -8,6 +8,7 @@ import CommandPalette from '@/components/layout/CommandPalette';
 import { personalInfo } from '@/data/personal';
 import { socialLinks } from '@/data/social';
 import { SITE_URL } from '@/lib/constants';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -102,6 +103,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+         <Analytics />
       </body>
     </html>
   );
